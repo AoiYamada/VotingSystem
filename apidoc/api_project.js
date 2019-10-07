@@ -1,0 +1,14 @@
+define({
+  "name": "Voting System",
+  "version": "0.1.2",
+  "description": "Voting System API Doc",
+  "sampleUrl": "http://localhost:3000",
+  "apidoc": "0.3.0",
+  "defaultVersion": "0.0.0",
+  "generator": {
+    "name": "apidoc",
+    "time": "2019-10-07T15:38:34.025Z",
+    "url": "http://apidocjs.com",
+    "version": "0.17.7"
+  }
+});

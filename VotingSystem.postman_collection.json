@@ -1,0 +1,2011 @@
+{
+	"info": {
+		"_postman_id": "5c692d4b-b7e0-4c9b-aec0-57bf25d97522",
+		"name": "VotingSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Campaign",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"title\": \"\",\r\n\t\"start_time\": 0,\r\n\t\"end_time\": 0,\r\n\t\"options\": []\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/campaign",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"campaign"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Error: Missing Start Time",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"Test\",\r\n\t\"start_time\": 0,\r\n\t\"end_time\": 0,\r\n\t\"options\": []\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/campaign",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"campaign"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3598"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570470778"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:43:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Symbol(Missing Start Time)\"\n}"
+				},
+				{
+					"name": "Error: Missing Title",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"\",\r\n\t\"start_time\": 0,\r\n\t\"end_time\": 0,\r\n\t\"options\": []\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/campaign",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"campaign"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3599"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570470778"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:42:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Symbol(Missing Title)\"\n}"
+				},
+				{
+					"name": "Error: Options should not be empty",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"Test\",\r\n\t\"start_time\": 1569743742862,\r\n\t\"end_time\": 1669743842862,\r\n\t\"options\": []\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/campaign",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"campaign"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3599"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570471079"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:47:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Symbol(Options should not be empty)\"\n}"
+				},
+				{
+					"name": "Create Campaign",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"Test1\",\r\n\t\"start_time\": 1569743742862,\r\n\t\"end_time\": 1669743842862,\r\n\t\"options\": [\"A\", \"B\"]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/campaign",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"campaign"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3598"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570470165"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Response-Time",
+							"value": "1052ms"
+						},
+						{
+							"key": "Content-Length",
+							"value": "133"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:33:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"350b60df-d3c4-4d59-8d35-747d4a023560\",\n    \"title\": \"Test1\",\n    \"start_time\": 1569743742862,\n    \"end_time\": 1669743842862,\n    \"options\": [\n        \"A\",\n        \"B\"\n    ]\n}"
+				},
+				{
+					"name": "Error: Missing End Time",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"Test\",\r\n\t\"start_time\": 1569743742862,\r\n\t\"end_time\": 0,\r\n\t\"options\": []\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/campaign",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"campaign"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3597"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570470778"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:44:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Symbol(Missing End Time)\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Campaign",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/campaign/:uuid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"campaign",
+						":uuid"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "5",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "uuid",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Campaign With campaign_uuid",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/campaign/:uuid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"campaign",
+								":uuid"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "4d7cbced-49c6-48ab-bf33-c1492e6ed013"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3585"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570470165"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Response-Time",
+							"value": "0ms"
+						},
+						{
+							"key": "Content-Length",
+							"value": "149"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:38:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"4d7cbced-49c6-48ab-bf33-c1492e6ed013\",\n    \"title\": \"Not Start\",\n    \"start_time\": 1669743742862,\n    \"end_time\": 1689743742862,\n    \"options\": [\n        \"A1\",\n        \"B2\",\n        \"C3\",\n        \"D4\"\n    ]\n}"
+				},
+				{
+					"name": "Get Campaign With page & limit",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/campaign/:uuid?page=1&limit=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"campaign",
+								":uuid"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3584"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570470165"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Response-Time",
+							"value": "1ms"
+						},
+						{
+							"key": "Content-Length",
+							"value": "765"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:39:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 10,\n    \"rows\": [\n        {\n            \"id\": \"4d7cbced-49c6-48ab-bf33-c1492e6ed013\",\n            \"title\": \"Not Start\",\n            \"start_time\": 1669743742862,\n            \"end_time\": 1689743742862,\n            \"options\": [\n                \"A1\",\n                \"B2\",\n                \"C3\",\n                \"D4\"\n            ]\n        },\n        {\n            \"id\": \"d7198946-a64f-41a0-b5f2-b5664044b9ab\",\n            \"title\": \"Test8\",\n            \"start_time\": 1569743742862,\n            \"end_time\": 1669743842862,\n            \"options\": [\n                \"A1\",\n                \"B2\",\n                \"C3\",\n                \"D4\"\n            ]\n        },\n        {\n            \"id\": \"ce086431-7363-4b1e-b0d0-bb2a66719641\",\n            \"title\": \"Test3\",\n            \"start_time\": 1569743742862,\n            \"end_time\": 1669743842862,\n            \"options\": [\n                \"A\",\n                \"B\",\n                \"C\"\n            ]\n        },\n        {\n            \"id\": \"c93231e8-0223-4aba-945d-5094bf55b85a\",\n            \"title\": \"Test2\",\n            \"start_time\": 1569743742862,\n            \"end_time\": 1669743842862,\n            \"options\": [\n                \"A\",\n                \"B\"\n            ]\n        },\n        {\n            \"id\": \"a909db20-64f5-4b0e-81e4-c14720912669\",\n            \"title\": \"Test6\",\n            \"start_time\": 1569743742862,\n            \"end_time\": 1669743842862,\n            \"options\": [\n                \"A1\",\n                \"B2\",\n                \"C3\"\n            ]\n        }\n    ],\n    \"next\": \"/campaign/?limit=5&page=2\"\n}"
+				},
+				{
+					"name": "Get Campaign Without campaign_uuid",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/campaign/:uuid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"campaign",
+								":uuid"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3586"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570470165"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Response-Time",
+							"value": "1ms"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1432"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:37:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 10,\n    \"rows\": [\n        {\n            \"id\": \"4d7cbced-49c6-48ab-bf33-c1492e6ed013\",\n            \"title\": \"Not Start\",\n            \"start_time\": 1669743742862,\n            \"end_time\": 1689743742862,\n            \"options\": [\n                \"A1\",\n                \"B2\",\n                \"C3\",\n                \"D4\"\n            ]\n        },\n        {\n            \"id\": \"d7198946-a64f-41a0-b5f2-b5664044b9ab\",\n            \"title\": \"Test8\",\n            \"start_time\": 1569743742862,\n            \"end_time\": 1669743842862,\n            \"options\": [\n                \"A1\",\n                \"B2\",\n                \"C3\",\n                \"D4\"\n            ]\n        },\n        {\n            \"id\": \"ce086431-7363-4b1e-b0d0-bb2a66719641\",\n            \"title\": \"Test3\",\n            \"start_time\": 1569743742862,\n            \"end_time\": 1669743842862,\n            \"options\": [\n                \"A\",\n                \"B\",\n                \"C\"\n            ]\n        },\n        {\n            \"id\": \"c93231e8-0223-4aba-945d-5094bf55b85a\",\n            \"title\": \"Test2\",\n            \"start_time\": 1569743742862,\n            \"end_time\": 1669743842862,\n            \"options\": [\n                \"A\",\n                \"B\"\n            ]\n        },\n        {\n            \"id\": \"a909db20-64f5-4b0e-81e4-c14720912669\",\n            \"title\": \"Test6\",\n            \"start_time\": 1569743742862,\n            \"end_time\": 1669743842862,\n            \"options\": [\n                \"A1\",\n                \"B2\",\n                \"C3\"\n            ]\n        },\n        {\n            \"id\": \"9b0194f3-0c80-49cb-bee0-e27e4916222e\",\n            \"title\": \"Test7\",\n            \"start_time\": 1569743742862,\n            \"end_time\": 1669743842862,\n            \"options\": [\n                \"A1\",\n                \"B2\",\n                \"C3\",\n                \"D\"\n            ]\n        },\n        {\n            \"id\": \"350b60df-d3c4-4d59-8d35-747d4a023560\",\n            \"title\": \"Test1\",\n            \"start_time\": 1569743742862,\n            \"end_time\": 1669743842862,\n            \"options\": [\n                \"A\",\n                \"B\"\n            ]\n        },\n        {\n            \"id\": \"2ce4c180-c48d-4932-bd17-48cc648a369c\",\n            \"title\": \"Test5\",\n            \"start_time\": 1569743742862,\n            \"end_time\": 1669743842862,\n            \"options\": [\n                \"A1\",\n                \"B2\",\n                \"C\"\n            ]\n        },\n        {\n            \"id\": \"06f815e1-db62-4249-8fe6-70c5d981de4a\",\n            \"title\": \"Test4\",\n            \"start_time\": 1569743742862,\n            \"end_time\": 1669743842862,\n            \"options\": [\n                \"A1\",\n                \"B\",\n                \"C\"\n            ]\n        },\n        {\n            \"id\": \"18ef73ab-7044-4ba1-bf4a-8698e785e334\",\n            \"title\": \"End\",\n            \"start_time\": 1469743742862,\n            \"end_time\": 1539743742862,\n            \"options\": [\n                \"A1\",\n                \"B2\",\n                \"C3\",\n                \"D4\"\n            ]\n        }\n    ]\n}"
+				},
+				{
+					"name": "Error: Get Non Exist Campaign",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/campaign/:uuid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"campaign",
+								":uuid"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "5",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "4d7cbced-49c6-48ab-bf33-c1492e6ed015"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3576"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570470165"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:41:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Symbol(Campaign not exist)\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Votes of a campaign",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/vote/:campaign_uuid?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"vote",
+						":campaign_uuid"
+					],
+					"query": [
+						{
+							"key": "hkid",
+							"value": "",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "campaign_uuid",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Error: Missing Campaign ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/vote/:campaign_uuid?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vote",
+								":campaign_uuid"
+							],
+							"query": [
+								{
+									"key": "hkid",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "campaign_uuid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3594"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570471079"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:50:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"CAMPAIGN_UUID_REQUIRED\"\n}"
+				},
+				{
+					"name": "Get Votes of a campaign",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/vote/:campaign_uuid?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vote",
+								":campaign_uuid"
+							],
+							"query": [
+								{
+									"key": "hkid",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "campaign_uuid",
+									"value": "4d7cbced-49c6-48ab-bf33-c1492e6ed013"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3596"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570471079"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Response-Time",
+							"value": "3ms"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:49:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"votes\": {\n        \"A1\": 0,\n        \"B2\": 0,\n        \"C3\": 0,\n        \"D4\": 0\n    }\n}"
+				},
+				{
+					"name": "Error: Campaign not exist",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/vote/:campaign_uuid?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vote",
+								":campaign_uuid"
+							],
+							"query": [
+								{
+									"key": "hkid",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "campaign_uuid",
+									"value": "4d7cbced-49c6-48ab-bf33-c1492e6ed015"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3595"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570471079"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:50:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Symbol(Campaign not exist)\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Vote a candidate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "hkid",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "option",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/vote/:campaign_uuid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"vote",
+						":campaign_uuid"
+					],
+					"variable": [
+						{
+							"key": "campaign_uuid",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Error: Vote non exist candidate",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hkid",
+									"value": "A123",
+									"type": "text"
+								},
+								{
+									"key": "option",
+									"value": "D6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/vote/:campaign_uuid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vote",
+								":campaign_uuid"
+							],
+							"variable": [
+								{
+									"key": "campaign_uuid",
+									"value": "d7198946-a64f-41a0-b5f2-b5664044b9ab"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3585"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570471079"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:55:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Symbol(Option not exist)\"\n}"
+				},
+				{
+					"name": "Vote a candidate",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hkid",
+									"value": "A123",
+									"type": "text"
+								},
+								{
+									"key": "option",
+									"value": "B2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/vote/:campaign_uuid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vote",
+								":campaign_uuid"
+							],
+							"variable": [
+								{
+									"key": "campaign_uuid",
+									"value": "d7198946-a64f-41a0-b5f2-b5664044b9ab"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3587"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570471079"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Response-Time",
+							"value": "3ms"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:54:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Error: Missing HKID",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hkid",
+									"value": "A123",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "option",
+									"value": "D6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/vote/:campaign_uuid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vote",
+								":campaign_uuid"
+							],
+							"variable": [
+								{
+									"key": "campaign_uuid",
+									"value": "d7198946-a64f-41a0-b5f2-b5664044b9ab"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3584"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570471079"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:55:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"HKID_STRING_REQUIRED\"\n}"
+				},
+				{
+					"name": "Error: Vote another candidate",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hkid",
+									"value": "A123",
+									"type": "text"
+								},
+								{
+									"key": "option",
+									"value": "A1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/vote/:campaign_uuid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vote",
+								":campaign_uuid"
+							],
+							"variable": [
+								{
+									"key": "campaign_uuid",
+									"value": "d7198946-a64f-41a0-b5f2-b5664044b9ab"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3586"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570471079"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:54:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Symbol(HKID voted)\"\n}"
+				},
+				{
+					"name": "Error: Vote non exist campaign",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hkid",
+									"value": "A123",
+									"type": "text"
+								},
+								{
+									"key": "option",
+									"value": "B2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/vote/:campaign_uuid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vote",
+								":campaign_uuid"
+							],
+							"variable": [
+								{
+									"key": "campaign_uuid",
+									"value": "d7198946-a64f-41a0-b5f2-b5664044b9aa"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3580"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570471079"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:56:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Symbol(Campaign not exist)\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Active Campaign List order by total votes with the last closed Campaign",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Active Campaign List order by total votes with the last closed Campaign",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "3600"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "3579"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1570471079"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Response-Time",
+							"value": "191ms"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1606"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 07 Oct 2019 17:57:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"d7198946-a64f-41a0-b5f2-b5664044b9ab\",\n        \"title\": \"Test8\",\n        \"start_time\": \"2019-09-29 07:55:42\",\n        \"end_time\": \"2022-11-29 17:44:02\",\n        \"options\": {\n            \"A1\": 0,\n            \"B2\": 1,\n            \"C3\": 0,\n            \"D4\": 0\n        },\n        \"total_votes\": 1\n    },\n    {\n        \"id\": \"06f815e1-db62-4249-8fe6-70c5d981de4a\",\n        \"title\": \"Test4\",\n        \"start_time\": \"2019-09-29 07:55:42\",\n        \"end_time\": \"2022-11-29 17:44:02\",\n        \"options\": {\n            \"A1\": 0,\n            \"B\": 0,\n            \"C\": 0\n        },\n        \"total_votes\": 0\n    },\n    {\n        \"id\": \"2ce4c180-c48d-4932-bd17-48cc648a369c\",\n        \"title\": \"Test5\",\n        \"start_time\": \"2019-09-29 07:55:42\",\n        \"end_time\": \"2022-11-29 17:44:02\",\n        \"options\": {\n            \"A1\": 0,\n            \"B2\": 0,\n            \"C\": 0\n        },\n        \"total_votes\": 0\n    },\n    {\n        \"id\": \"350b60df-d3c4-4d59-8d35-747d4a023560\",\n        \"title\": \"Test1\",\n        \"start_time\": \"2019-09-29 07:55:42\",\n        \"end_time\": \"2022-11-29 17:44:02\",\n        \"options\": {\n            \"A\": 0,\n            \"B\": 0\n        },\n        \"total_votes\": 0\n    },\n    {\n        \"id\": \"9b0194f3-0c80-49cb-bee0-e27e4916222e\",\n        \"title\": \"Test7\",\n        \"start_time\": \"2019-09-29 07:55:42\",\n        \"end_time\": \"2022-11-29 17:44:02\",\n        \"options\": {\n            \"A1\": 0,\n            \"B2\": 0,\n            \"C3\": 0,\n            \"D\": 0\n        },\n        \"total_votes\": 0\n    },\n    {\n        \"id\": \"a909db20-64f5-4b0e-81e4-c14720912669\",\n        \"title\": \"Test6\",\n        \"start_time\": \"2019-09-29 07:55:42\",\n        \"end_time\": \"2022-11-29 17:44:02\",\n        \"options\": {\n            \"A1\": 0,\n            \"B2\": 0,\n            \"C3\": 0\n        },\n        \"total_votes\": 0\n    },\n    {\n        \"id\": \"c93231e8-0223-4aba-945d-5094bf55b85a\",\n        \"title\": \"Test2\",\n        \"start_time\": \"2019-09-29 07:55:42\",\n        \"end_time\": \"2022-11-29 17:44:02\",\n        \"options\": {\n            \"A\": 0,\n            \"B\": 0\n        },\n        \"total_votes\": 0\n    },\n    {\n        \"id\": \"ce086431-7363-4b1e-b0d0-bb2a66719641\",\n        \"title\": \"Test3\",\n        \"start_time\": \"2019-09-29 07:55:42\",\n        \"end_time\": \"2022-11-29 17:44:02\",\n        \"options\": {\n            \"A\": 0,\n            \"B\": 0,\n            \"C\": 0\n        },\n        \"total_votes\": 0\n    },\n    {\n        \"id\": \"18ef73ab-7044-4ba1-bf4a-8698e785e334\",\n        \"title\": \"End\",\n        \"start_time\": \"2016-07-28 22:09:02\",\n        \"end_time\": \"2018-10-17 02:35:42\",\n        \"options\": {\n            \"A1\": 0,\n            \"B2\": 0,\n            \"C3\": 0,\n            \"D4\": 0\n        },\n        \"total_votes\": 0\n    }\n]"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "074911c3-b71d-4d26-8cfd-d8db87c236c8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c7495181-ec9b-4c72-9bd9-ad2dbb85da6e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

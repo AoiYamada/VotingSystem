@@ -1,0 +1,54 @@
+version: "3.7"
+services:
+  api-service:
+    depends_on:
+      - redis-service
+      - mysql-service
+    image: node:8.16.1
+    volumes:
+      - ./:/project
+    networks:
+      stack-net:
+        ipv4_address: 172.196.1.2
+    ports:
+      - 3000:3000 # export to host for access
+      - 9229:9229 # export to host for inspect
+    restart: always
+    environment:
+      NODE_ENV: dev
+    working_dir: /project
+    command:
+      - /bin/sh
+      - -c
+      - |
+        npm i --no-save
+        chmod +x wait-for-it.sh
+        bash ./wait-for-it.sh mysql-service:3306 -t 0
+        npx sequelize-cli db:create
+        npx sequelize-cli db:migrate
+        npm start
+  redis-service:
+    image: redis:5.0.6
+    networks:
+      stack-net:
+        ipv4_address: 172.196.1.3
+    ports:
+      - 6379:6379 # export to host for inspect
+    restart: always
+    command: redis-server --appendonly yes
+  mysql-service:
+    image: mysql:5.7.27
+    networks:
+      stack-net:
+        ipv4_address: 172.196.1.4
+    ports:
+      - 3306:3306 # export to host for inspect
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+networks:
+  stack-net:
+    ipam:
+      config:
+        - subnet: "172.196.1.0/24"

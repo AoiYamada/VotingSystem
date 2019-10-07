@@ -1,0 +1,27 @@
+<!-- Manually test the socket functions -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+    <script>
+      const socket = io("ws://localhost:3000", {
+        query: {
+          // campaign_uuids: JSON.stringify([
+          //   "8d56eaa6-35ca-4817-8cb7-e94c706ad237",
+          //   "92f3736a-d169-4cec-b02c-2ba4c0482e72",
+          // ]),
+        },
+      });
+      socket.on("connect", () => {
+        console.log("Connected");
+      });
+      socket.emit("subscribe", JSON.stringify(["2fb1500e-fa6d-4dda-9f74-c036a9b63fc6"]));
+      socket.on("vote", data => console.log(data));
+    </script>
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
