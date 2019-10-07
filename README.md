@@ -49,6 +49,8 @@ And this command can be used to get into the container:
 docker exec -it voting_api-service_1 /bin/bash
 ```
 
+ATTENTION: [**_wait-for-it.sh_**](./wait-for-it.sh) maybe corrupted if you clone the repo on a Window System and upload it to a Linux System. Download the zip version from [the original github repo](https://github.com/vishnubob/wait-for-it) is saver.
+
 ### Manually
 
 Install dependencies:
