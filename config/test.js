@@ -5,7 +5,7 @@ module.exports = {
       host: "localhost",
       port: 6379,
       password: "",
-      defaultDatabase: 1,
+      db: 1,
     },
     MYSQL: {
       username: "root",

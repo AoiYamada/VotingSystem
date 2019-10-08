@@ -4,7 +4,7 @@ module.exports = {
       host: "redis-service",
       port: 6379,
       password: "",
-      defaultDatabase: 0,
+      db: 0,
     },
     MYSQL: {
       username: "root",
